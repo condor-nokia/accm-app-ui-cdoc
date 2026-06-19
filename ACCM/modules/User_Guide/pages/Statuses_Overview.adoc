@@ -8,15 +8,15 @@ Status tracking operates hierarchically: element statuses determine the overall 
 === Status values
 The possible values for the status attribute of campaigns, clusters, elements, and notifications
 
-* `[silver]#*NotScheduled*#`
-* `[orange]#*Scheduled*#`
-* `[blue]#*Executing*#`
-* `[green]#*Success*#`
-* `[red]#*Error*#`
-* `[blue]#*ExecutingRollback*#`
-* `[green]#*RollBacked*#`
-* `[red]#*RollBackError*#`
-* `[red]#*Canceled*#`
+* NotScheduled
+* Scheduled
+* Executing
+* Success
+* Error
+* ExecutingRollback
+* RollBacked
+* RollBackError
+* Canceled
 
 === Campaign States
 The campaign status provides a high-level overview of the entire automated update process:

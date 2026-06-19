@@ -6,7 +6,7 @@ include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
 ==== _Altiplano Applications_
 
 [discrete]
-==== Installation, Deployment and User Guide
+==== User Guide
 
 [discrete]
 ==== {part-number}
