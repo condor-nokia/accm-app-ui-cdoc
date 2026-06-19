@@ -12,6 +12,11 @@ Before managing campaigns, you must be authenticated to the {app-short-name} as 
 Refer to xref:User_Guide:How_to_manage_ACCM_access.adoc[How to Manage {app-short-name} access] section for more details.
 ====
 
+[NOTE]
+====
+Refer to xref:Statuses_Overview.adoc[Statuses Overview] section for more details about Campaigns and Elements available actions based on their current status.
+====
+
 == Manual start
 To manually start a campaign using the {app-short-name} WebUI, you must execute the following steps:
 

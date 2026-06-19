@@ -12,6 +12,11 @@ Before monitoring the progress, you must be authenticated to the {app-short-name
 Refer to xref:User_Guide:How_to_manage_ACCM_access.adoc[How to Manage {app-short-name} access] section for more details.
 ====
 
+[NOTE]
+====
+Refer to xref:Statuses_Overview.adoc[Statuses Overview] section for more details about Campaigns, Clusters and Elements status.
+====
+
 == Monitor the progress of a campaign
 
 To monitor the progress of a campaign using the {app-short-name} WebUI, you must execute the following steps:
@@ -30,6 +35,7 @@ image::CAMPAIGNSSection_detail.png[align="center"]
 
 . The general progress for the campaign is shown:
 +
+.General progress for an executing campaign
 image::CAMPAIGNSSection_GeneralProgress.png[align="center"]
 
 . Locate the cluster to monitor, and click the Details button on the row.
@@ -38,7 +44,11 @@ image::CAMPAIGNSSection_detail.png[align="center"]
 
 . The general progress for the selected cluster is shown:
 +
+.Progress for an executing cluster
 image::CAMPAIGNSSection_clusterDetails.png[align="center"]
++
+.Progress for a success cluster
+image::CAMPAIGNSSection_clusterDetails2.png[align="center"]
 
 . In case of error, the cause is shown at cluster level, and every step has its own cause:
 +
