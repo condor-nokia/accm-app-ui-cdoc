@@ -1,0 +1,17 @@
+include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+
+= How to Use {app-short-name}
+
+This section provides the steps required to configure the application.
+
+When the {app-short-name} is installed on top of an {main-base-app} solution, the operator
+can create software matrices and campaigns that allow device upgrades within the configured clusters.
+To manage them, perform the following actions:
+
+. xref:How_to_configure_a_software_matrix.adoc[Configure Software Matrices]
+. xref:How_to_configure_a_campaign.adoc[Configure Campaigns]
+. xref:How_to_control_campaign_execution.adoc[How to Control Campaigns Execution]
+. xref:How_to_monitoring_campaign_progress.adoc[How to Monitor Campaign Progress]
+. xref:Statuses_Overview.adoc[Statuses Overview]
+
+include::ROOT:go-back-component.adoc[Back]

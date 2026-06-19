@@ -1,0 +1,83 @@
+include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+
+= How to configure Software Matrices
+
+== Introduction
+
+This section provides the steps required to manage the software matrices in the {app-short-name}.
+
+[NOTE]
+====
+Before managing software matrices, you must be authenticated to the {app-short-name} as an altiplano user.
+Refer to xref:User_Guide:How_to_manage_ACCM_access.adoc[How to Manage {app-short-name} access] section for more details.
+====
+
+== Create Software Matrix
+To create a software matrix using the {app-short-name} WebUI, you must execute the following steps:
+
+. Click the "SOFTWARE MATRIX" option on the menu bar displayed on top of the screen.
++
+image::SOFTWAREMATRIX_menu.png[align="center"]
+
+. All software matrices will be listed:
++
+image::SOFTWAREMATRIXSection.png[align="center"]
+
+. Click the *Add matrix* button.
++
+image::SOFTWAREMATRIXSection_newButton.png[align="center"]
+
+. Enter the required data in the popup window.
++
+image::SOFTWAREMATRIXSection_createSOFTWAREMATRIX.png[align="left"]
+
+. Enter all required values:
++
+- *Name:* It is the software matrix name.
+- *Type:* It is the type of the software matrix. Allowed values are: "Devices Only", "Devices and ONTs" and "ONTs only"
+- *Device Configuration*: At least one device configuration must be added to define the software version and packages to be used by device types.
+. Click the *SAVE* button.
+
+
+== Edit Software Matrix
+To edit a software matrix using the {app-short-name} WebUI, you must execute the following steps:
+
+. Click the "SOFTWARE MATRIX" option on the menu bar displayed on top of the screen.
++
+image::SOFTWAREMATRIX_menu.png[align="center"]
+
+. All software matrices will be listed:
++
+image::SOFTWAREMATRIXSection.png[align="center"]
+
+. Locate the software matrix to be modified and click the *Edit* button on the row.
++
+image::SOFTWAREMATRIXSection_editButton.png[align="center"]
+
+. Enter the required data in the popup window.
++
+image::SOFTWAREMATRIXSection_updateSOFTWAREMATRIX.png[align="left"]
+
+. The values that can be updated are:
++
+- *Type:* It is the type of the software matrix. Allowed values are: "Devices Only", "Devices and ONTs" and "ONTs only"
+- *Device Configuration*: At least one device configuration must be added to define the software version and packages to be used by device types.
+. Click the *SAVE* button.
+
+
+== Delete Software Matrix
+To delete a software matrix using the {app-short-name} WebUI, you must execute the following steps:
+
+. Click the "SOFTWARE MATRIX" option on the menu bar displayed on top of the screen.
++
+image::SOFTWAREMATRIX_menu.png[align="center"]
+
+. All SOFTWARE MATRICES will be listed:
++
+image::SOFTWAREMATRIXSection.png[align="center"]
+
+. Locate the software matrix to be deleted and click the *Delete* icon in the specific row.
++
+image::SOFTWAREMATRIX_deleteButton.png[align="center"]
+
+include::ROOT:go-back-component.adoc[Back]

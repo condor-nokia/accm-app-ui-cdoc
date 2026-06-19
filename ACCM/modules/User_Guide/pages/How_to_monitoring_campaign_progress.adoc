@@ -1,0 +1,49 @@
+include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+
+= How to monitor campaign progress
+
+== Introduction
+
+This section provides the steps required to monitor the progress of the campaigns.
+
+[NOTE]
+====
+Before monitoring the progress, you must be authenticated to the {app-short-name} as an altiplano user.
+Refer to xref:User_Guide:How_to_manage_ACCM_access.adoc[How to Manage {app-short-name} access] section for more details.
+====
+
+== Monitor the progress of a campaign
+
+To monitor the progress of a campaign using the {app-short-name} WebUI, you must execute the following steps:
+
+. Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen.
++
+image::CAMPAIGNS_menu.png[align="center"]
+
+. All the campaigns will be listed:
++
+image::CAMPAIGNS_menuSection.png[align="center"]
+
+. Locate the campaign to monitor, and click the Detail button on the row.
++
+image::CAMPAIGNSSection_detail.png[align="center"]
+
+. The general progress for the campaign is shown:
++
+image::CAMPAIGNSSection_GeneralProgress.png[align="center"]
+
+. Locate the cluster to monitor, and click the Details button on the row.
++
+image::CAMPAIGNSSection_detail.png[align="center"]
+
+. The general progress for the selected cluster is shown:
++
+image::CAMPAIGNSSection_clusterDetails.png[align="center"]
+
+. In case of error, the cause is shown at cluster level, and every step has its own cause:
++
+image::CAMPAIGNSSection_ClusterDetailsErrors.png[align="center"]
++
+image::CAMPAIGNSSection_ClusterDetailsErrors2.png[align="center"]
+
+include::ROOT:go-back-component.adoc[Back]

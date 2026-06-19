@@ -1,0 +1,15 @@
+//include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+//LO COMENTO PORQUE VEO LAS PROPERTIES DESDE ACA, PERO AL GENERAR EL SITE CON ANTORA
+//DA WARNING Y NO ENCUENTRA LAS PROPERTIES AL GENERAR LA DOC!!!!
+:app-short-name: ACCM
+:main-base-app: Altiplano
+
+* User Guide
+
+** xref:How_to_manage_ACCM_access.adoc[How to Manage {app-short-name} access]
+
+** xref:How_to_use_ACCM.adoc[How to Use {app-short-name}]
+*** xref:How_to_configure_a_software_matrix.adoc[How to Configure Software Matrices (target solutions)]
+*** xref:How_to_configure_a_campaign.adoc[How to Configure Campaigns]
+*** xref:How_to_control_campaign_execution.adoc[How to Control Campaigns Execution]
+*** xref:How_to_monitoring_campaign_progress.adoc[How to monitor campaign progress]

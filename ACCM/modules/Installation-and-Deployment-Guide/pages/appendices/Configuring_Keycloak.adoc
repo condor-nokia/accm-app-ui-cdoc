@@ -1,0 +1,10 @@
+include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+
+= Keycloak Configuration
+
+[IMPORTANT]
+====
+For this initial release, the admin user of Altiplano can be used to execute the requests.
+====
+
+include::ROOT:go-back-component.adoc[Back]

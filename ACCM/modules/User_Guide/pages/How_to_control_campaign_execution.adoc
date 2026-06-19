@@ -1,0 +1,108 @@
+include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+
+= How to control Campaigns execution
+
+== Introduction
+
+This section provides the steps required to control the execution of campaigns.
+
+[NOTE]
+====
+Before managing campaigns, you must be authenticated to the {app-short-name} as an altiplano user.
+Refer to xref:User_Guide:How_to_manage_ACCM_access.adoc[How to Manage {app-short-name} access] section for more details.
+====
+
+== Manual start
+To manually start a campaign using the {app-short-name} WebUI, you must execute the following steps:
+
+. Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen:
++
+image::CAMPAIGNS_menu.png[align="center"]
+
+. All the campaigns will be listed:
++
+image::CAMPAIGNS_menuSection.png[align="center"]
+
+. Locate the campaign to start and click the Manual Start button on the row. Please note that the Manual Start option is only available for NotScheduled campaigns:
++
+image::CAMPAIGNSSection_notScheduled.png[align="center"]
+
+. Confirm the action:
++
+image::CAMPAIGNSSection_confirmManualStartAction.png[align="center"]
+
+== Cancel
+To cancel a campaign using the {app-short-name} WebUI, you must execute the following steps:
+
+. Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen:
++
+image::CAMPAIGNS_menu.png[align="center"]
+
+. All the campaigns will be listed:
++
+image::CAMPAIGNS_menuSection.png[align="center"]
+
+. Locate the campaign to cancel and click the Cancel button on the row. Please note that the Cancel option is only available for Executing or Executing Rollback campaigns:
++
+image::CAMPAIGNSSection_executing.png[align="center"]
+
+. Confirm the action:
++
+image::CAMPAIGNSSection_confirmCancelAction.png[align="center"]
+
+== Retry
+To retry a campaign using the {app-short-name} WebUI, you must execute the following steps:
+
+. Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen:
++
+image::CAMPAIGNS_menu.png[align="center"]
+
+. All the campaigns will be listed:
++
+image::CAMPAIGNS_menuSection.png[align="center"]
+
+. Locate the campaign to retry and click the Retry button on the row. Please note that the Retry option is only available for Error or Canceled campaigns:
++
+image::CAMPAIGNSSection_error.png[align="center"]
+
+. Confirm the action:
++
+image::CAMPAIGNSSection_confirmRetryAction.png[align="center"]
+
+== Rollback
+To rollback an element (device or ONT) using the {app-short-name} WebUI, you must execute the following steps:
+
+. Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen:
++
+image::CAMPAIGNS_menu.png[align="center"]
+
+. All the campaigns will be listed:
++
+image::CAMPAIGNS_menuSection.png[align="center"]
+
+. Locate the campaign that contains the element to rollback, and click the Detail button on the row:
++
+image::CAMPAIGNSSection_detail.png[align="center"]
+
+. All the clusters for the campaign will be listed:
++
+image::CAMPAIGNSSection_clusters.png[align="center"]
+
+. Locate the cluster that contains the element to rollback, and click the Details button on the row:
++
+image::CAMPAIGNSSection_detail.png[align="center"]
+
+. The list of elements for the cluster will be listed:
++
+image::CAMPAIGNSSection_clusterElements.png[align="center"]
+
+. Locate the element to rollback and click the rollback button. Please note that the Rollback option is only available for Success or Rollback Error elements:
++
+image::CAMPAIGNSSection_detail.png[align="center"]
+
+. Confirm the action:
++
+
+image::CAMPAIGNSSection_confirmRollbackAction.png[align="center"]
+
+include::ROOT:go-back-component.adoc[Back]

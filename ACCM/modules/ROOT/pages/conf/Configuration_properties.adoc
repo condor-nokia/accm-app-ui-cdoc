@@ -1,0 +1,28 @@
+
+:release-month: June
+:release-year: 2026
+:release-number: 26.6
+:prerelease-tag:
+:altiplano-release-number: 26.6
+:screenshot-altiplano-release-number: 26.6
+:chart-version: XX.X
+:helm-chart-name: altiplano-cm
+:issue-number: 3
+:part-number: YYY-YYYYY-YYYY-YYYY
+:app-full-name: Access Cluster Campaign Manager
+:app-short-name: ACCM
+:main-base-app: Altiplano
+:ip-host-example: 100.121.38.81
+:accm-web-context: campaign-manager-webapp
+:accm-api-context: campaign-manager-api
+:altiplano-host: ALTIPLANO_SERVER
+
+//Installation and Deployment:
+:accm-dbhost: "altiplano-mariadb"
+:accm-dbname: “app_cm”
+:accm-dbuser: "app_cm"
+:accm-dbpassword: "appCm@1234"
+:helm-version: 3.6.1
+
+//User Guide
+:ont-initials: ONT

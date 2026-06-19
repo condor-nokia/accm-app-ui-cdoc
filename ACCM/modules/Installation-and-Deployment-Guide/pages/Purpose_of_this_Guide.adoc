@@ -1,0 +1,9 @@
+include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+
+= Purpose of this guide
+
+This guide will helps you to use the {app-full-name}, and explore its various capabilities.
+
+User Guide section covers essential information for using the {app-full-name}.
+
+include::ROOT:go-back-component.adoc[Back]

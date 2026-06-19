@@ -1,0 +1,28 @@
+include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+
+= How to Manage {app-short-name} access
+
+== Introduction
+
+This section provides the steps required to authenticate to the {app-short-name}.
+
+To perform any operation on the {app-short-name}, you must be previously authenticated using
+altiplano user credentials.
+
+== How to Authenticate
+
+To authenticate to the UI the user must previously exist in Keycloak.
+If you do not have an account, create an {main-base-app} admin user in {main-base-app}’s Keycloak.
+
+To use the {app-short-name} through the WebUI you must:
+
+. Access the {app-short-name} WebUI using the following URL: +
+link:https://{altiplano-host}/{accm-web-context}[https://{altiplano-host}/{accm-web-context},window=_blank]
++
+For example:: https://{ip-host-example}/{accm-web-context}/
+
+. Log in to {app-short-name} using a specific username and password.
++
+image::accmLogin.png[align="center"]
+
+include::ROOT:go-back-component.adoc[Back]

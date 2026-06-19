@@ -1,0 +1,74 @@
+include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+
+= What is Access Cluster Campaign Manager?
+
+The {app-full-name} ({app-short-name}) operates on top of {main-base-app}, and enables operators to define, schedule, and
+monitor software update campaigns for network elements, in coordination with the Altiplano Software Management module.
+
+image::GeneralContextDiagram_RevA.png[align="center"]
+
+== Solution components
+
+{app-short-name} provides a configuration interface (REST API and UI) that enables the operators to configure the software matrices (target solutions) along with a core service that orchestrates the various download/upgrade activities within campaigns in a specific order.
+
+These components include:
+
+* {app-short-name} Web UI
+
+* {app-short-name} REST API Configuration Interface
+
+* {app-short-name} Core
+
+* {app-short-name} Persistence
+
+For more information about the interfaces exposed by {app-short-name}, refer to the
+xref:Installation-and-Deployment-Guide:appendices/ACCM_Exposed_Interfaces.adoc[{app-short-name} Exposed Interfaces] section.
+
+
+=== {app-full-name} Web UI
+Provides a user-friendly interface for operators to define, schedule, and monitor software update campaigns.
+It enables users to select target clusters, define software matrices, and view campaign status in real-time.
+
+=== {app-full-name} REST API Configuration Interface
+
+To configure software matrices and campaigns, {app-short-name} provides a REST API for operators.
+
+This API supports Web and external integrations, enabling other systems to interact with the application.
+All operations are delegated to the core module or the corresponding {main-base-app} module.
+
+=== {app-full-name} Core
+It is responsible for managing and executing the orchestration tasks involved in software updates.
+It handles the business logic for campaign creation, device exclusion, and update orchestration through {main-base-app}’s software management module.
+
+
+=== {app-full-name} Persistence
+It stores information such as campaign details, software matrix definitions,
+element exclusion lists, and a history of all executed campaigns.
+
+== Features
+
+The following table describes the main features provided by {app-full-name}.
+
+[width="100%",cols="30%,70%,options="header"]
+|===
+|*Feature/Enhancement*
+|*Description*
+
+|Software Matrices Management
+|{app-short-name} provides a REST API and a Web UI to manage Software Matrices. In this capacity, ACCM acts as a proxy for Altiplano Target Solutions, enabling the operations: Create, Update, Get and Delete.
+
+|Campaigns Management
+|{app-short-name} provides a REST API and a Web UI to manage campaigns, supporting Create, Update, Get, and Delete operations.
+
+|Campaigns Control and Recovery
+|{app-short-name} provides a REST API  and a Web UI to Start, Cancel and Retry campaign executions. Rollback is also supported at element level.
+
+|Campaigns Monitoring
+|{app-short-name} provides a REST API  and a Web UI to monitor the progress of a campaign execution.
+
+|Orchestration
+|{app-short-name} features a campaign orchestrator responsible for managing the sequential activity flow within a campaign update. Its execution logic is driven by real-time status.
+|===
+
+
+include::ROOT:go-back-component.adoc[Back]

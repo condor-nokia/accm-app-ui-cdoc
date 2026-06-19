@@ -1,0 +1,39 @@
+include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+
+= {app-short-name} Exposed Interfaces
+
+When {app-short-name} is successfully installed, the following interfaces are exposed:
+
+== {app-short-name} Web UI
+
+Provides a user-friendly way for operators to define, schedule, and monitor software update campaigns.
+It allows users to select target clusters, define software matrices, and view campaign status in real-time.
+
+To access it you must enter the following in a web browser: +
+link:https://{altiplano-host}/{accm-web-context}[https://{altiplano-host}/{accm-web-context},window=_blank]
+
+For example if {main-base-app}’s public IP is {ip-host-example} the {app-short-name} WEB UI is available at: +
+https://{ip-host-example}/{accm-web-context}[https://{ip-host-example}/{accm-web-context},window=_blank]
+
+
+== {app-short-name} REST API
+
+The {app-short-name} AC REST API allows an INP user to configure the {app-short-name} sending HTTP REST REQUEST.
+To access it you must use the following URL: +
+link:https://{altiplano-host}/{accm-api-context}[https://{altiplano-host}/{accm-api-context},window=_blank]
+
+For example if {main-base-app}’s public IP is: {ip-host-example} the {app-short-name} AC is available at: +
+link:https://{ip-host-example}/{accm-api-context}[https://{ip-host-example}/{accm-api-context},window=_blank]
+
+== Interfaces, ports and protocols used
+
+The following table describes ports and url exposed by the interfaces listed above:
+
+[width="99%",cols="30%,30%,40%,options="header"]
+|===
+|*Interface* |*Protocol* |*{app-short-name} Service Port/Altiplano Ingress Port*
+|WebUI | HTTPS |  8443 / 443
+|REST API | HTTPS | 8443 / 443
+|===
+
+include::ROOT:go-back-component.adoc[Back]

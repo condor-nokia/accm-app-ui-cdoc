@@ -1,0 +1,130 @@
+include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+
+= Statuses Overview
+
+== Introduction
+Status tracking operates hierarchically: element statuses determine the overall cluster state, which in turn aggregates to define the overarching campaign lifecycle state.
+
+=== Status values
+The possible values for the status attribute of campaigns, clusters, elements, and notifications
+
+* `[silver]#*NotScheduled*#`
+* `[orange]#*Scheduled*#`
+* `[blue]#*Executing*#`
+* `[green]#*Success*#`
+* `[red]#*Error*#`
+* `[blue]#*ExecutingRollback*#`
+* `[green]#*RollBacked*#`
+* `[red]#*RollBackError*#`
+* `[red]#*Canceled*#`
+
+=== Campaign States
+The campaign status provides a high-level overview of the entire automated update process:
+
+* *Scheduled*: The campaign has been successfully defined and queued with specific future dates for software download and update execution.
+* *Not Scheduled*: The campaign has been saved into the system but does not have execution dates configured, requiring a manual trigger to start.
+* *Executing*: The campaign is actively running its orchestration workflows across the associated clusters.
+* *Success*: The software update has completed successfully across all elements in all targeted clusters.
+* *Executing Rollback*: The system is actively reverting one or more elements back to their previous software versions.
+* *Canceled*: An executing campaign was manually stopped by an operator, halting further updates.
+* *Error*: The execution failed during deployment (e.g., due to an activity failing on Altiplano, or some post-check verification).
+* *Rollback Error*: A failure occurred while trying to execute a software rollback on an element.
+* *Rolled back*: The rollback process has finished successfully, and the selected elements from one or more clusters have been reverted completely to their previous software version.
+
+image::CAMPAIGNSSection_campaignStates.png[align="center"]
+
+=== Cluster States
+Their statuses are calculated dynamically based on non-excluded components.
+
+* *Scheduled / Not Scheduled*: Inherited from the initial campaign state before orchestration begins.
+* *Executing*: The cluster is actively walking through its designated sequence of upgrade activities and automated post-check verifications.
+* *Success*: All eligible network elements within the cluster layer have been upgraded and verified successfully.
+* *Executing Rollback*: One or more elements within the cluster are currently undergoing a software rollback.
+* *Canceled*: The cluster orchestration was halted midway due to a campaign cancellation.
+* *Error*: The upgrade or a post-check verification failed for a specific device batch, halting the process for that entire cluster.
+* *Rollback Error*: A failure occurred while trying to execute a software rollback on an element.
+* *Rolled back*: The rollback process has finished successfully, and the selected elements have been reverted completely to their previous software version.
+
+image::CAMPAIGNSSection_clusterStates.png[align="center"]
+
+=== Element States
+
+States that an element can transit through during the lifecycle of a software update campaign. An element's state is dynamically determined and tracked within the system to ensure correct execution, orchestration control, and visibility.
+
+* *NotScheduled*: The element belongs to a campaign that has been created but does not have execution or download dates defined, meaning it is awaiting further configuration or manual initiation.
+* *Scheduled*: The element is queued for an update. Both download and update dates have been successfully set in the future, and the element is waiting for the Scheduler to trigger execution.
+* *Executing*: The element is actively undergoing its assigned software management task, which includes either the software download phase, the upgrade process within Altiplano, or the post checks verifications done by {app-short-name}.
+* *Success*: The element has successfully completed its update activity sequence, cleared all upgrade post-checks (such as reachability and configuration alignment), and is fully functional.
+* *Error*: An operation has failed on this specific element. This can occur due to a failed execution step in Altiplano or a failure during one of the mandatory post-check verifications (e.g., traffic ramp-up or reachability checks).
+* *ExecutingRollback*: The element is currently undergoing an operator-initiated rollback procedure to revert its software to the previous version, or running post checks verifications after a successful rollback of the element's software.
+* *RollBacked*: The element has successfully reverted to its previous stable software package, and its post-checks have validated that it has safely returned to an operational state.
+* *RollBackError*: The system encountered an error while trying to execute a rollback on this element, leaving the element in an indeterminate state that requires manual operator intervention.
+* *Canceled*: The element's update sequence was explicitly aborted by an operator command while it was actively executing.
+
+image::CAMPAIGNSSection_elementStates.png[align="center"]
+
+=== State-Based Actions Matrix
+
+To ensure integrity and prevent operational conflicts, control actions are strictly constrained by the current state of either the campaign or the individual elements.
+
+==== Campaign Actions
+
+The table below outlines the available control actions that an operator can execute at the campaign level depending on its current execution status.
+
+[cols="2,2,4", options="header"]
+|===
+| Action
+| Allowed States
+| Description
+
+| *Manual Start*
+| Scheduled +
+NotScheduled
+| Initiates immediate execution of the campaign, bypassing any previously defined schedule. The job is updated in the scheduler for instant trigger.
+
+| *Cancel*
+| Executing +
+ExecutingRollback
+| Aborts the currently active upgrade or rollback tasks in Altiplano and stops the campaign's progression.
+
+| *Retry*
+| Error +
+Canceled
+| Re-executes the update sequence specifically targeting the failed or canceled element activities, intelligently skipping already successful elements.
+
+| *Delete*
+| Scheduled +
+NotScheduled +
+Success +
+Canceled +
+Error
+| Completely removes the campaign from the local database, scheduler, and corresponding Altiplano modules. Deletion is strictly blocked if the campaign is running.
+
+| *Edit (Update)*
+| Scheduled +
+NotScheduled
+| Modifies campaign details such as the software matrix, cluster lists, schedules, or device inclusion/exclusion lists.
+|===
+
+==== Element Actions
+
+Certain actions can be applied directly to individual cluster elements independently of the rest of the campaign elements.
+
+[cols="2,2,4", options="header"]
+|===
+| Action
+| Allowed Campaign/Element States
+| Operational Behavior
+
+| *Rollback*
+| *Campaign:* Success, Error, Canceled, or ExecutingRollback +
+*Element:* Success
+| Reverts a specific element back to its prior stable version. If a device is selected under a "Device and all its ONTs" matrix, all subtended ONTs are rolled back automatically.
+
+| *Retry Rollback*
+| *Campaign:* RollbackError +
+*Element:* RollbackError
+| Allows the operator to re-attempt a failed rollback operation on elements that did not complete the transition successfully.
+|===
+
+include::ROOT:go-back-component.adoc[Back]

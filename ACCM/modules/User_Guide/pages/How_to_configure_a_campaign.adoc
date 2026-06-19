@@ -1,0 +1,83 @@
+include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+
+= How to configure Campaigns
+
+== Introduction
+
+This section provides the steps required to manage the campaigns in the {app-short-name}.
+
+[NOTE]
+====
+Before managing campaigns, you must be authenticated to the {app-short-name} as an altiplano user.
+Refer to xref:User_Guide:How_to_manage_ACCM_access.adoc[How to Manage {app-short-name} access] section for more details.
+====
+
+== Create Campaign
+To create a campaign using the {app-short-name} WebUI, you must execute the following steps:
+
+. Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen.
++
+image::CAMPAIGNS_menu.png[align="center"]
+
+. All the campaigns will be listed:
++
+image::CAMPAIGNS_menuSection.png[align="center"]
+
+. Click the *Add campaign* button.
++
+image::CAMPAIGNSSection_newButton.png[align="center"]
+
+. Enter the required data in the popup window.
++
+image::CAMPAIGNSSection_createCAMPAIGNS.png[align="left"]
+
+. Enter all required values:
++
+- *Name:* It is the campaign name.
+- *Software matrix:* It is the name of the software matrix to use. At least one matrix must exist and must be created previously on the "SOFTWARE MATRIX" section.
+- *Clusters*: At least one cluster must be selected from the suggested clusters
+. Click the *SAVE* button.
+
+
+== Edit Campaign
+To edit a campaign using the {app-short-name} WebUI, you must execute the following steps:
+
+. Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen.
++
+image::CAMPAIGNS_menu.png[align="center"]
+
+. All the campaigns will be listed:
++
+image::CAMPAIGNS_menuSection.png[align="center"]
+
+. Locate the campaign to be modified and click the *Edit* button on the row.
++
+image::CAMPAIGNSSection_editButton.png[align="center"]
+
+. Modified the desired data in the popup window.
++
+image::CAMPAIGNSSection_updateCAMPAIGN.png[align="left"]
+
+. The values that can be updated are:
++
+- *Software matrix:* It is the name of the software matrix to use. At least one matrix must exist and must be created previously on the "SOFTWARE MATRIX" section.
+- *Schedule:* (Optional) It allows to add download and update dates so the campaign can run automatically when the dates arrive.
+- *Clusters*: At least one cluster must be selected from the suggested clusters.
+. Click the *SAVE* button.
+
+== Delete Campaign
+To delete a campaign using the {app-short-name} WebUI, you must execute the following steps:
+
+. Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen.
++
+image::CAMPAIGNS_menu.png[align="center"]
+
+. All the Campaigns will be listed:
++
+image::CAMPAIGNS_menuSection.png[align="center"]
+
+. Locate the campaign to be deleted and click the *Delete* icon in the specific row.
++
+image::SOFTWAREMATRIX_deleteButton.png[align="center"]
+
+include::ROOT:go-back-component.adoc[Back]

@@ -1,0 +1,29 @@
+include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+
+= Abbreviations and Acronyms
+
+The following table lists the acronyms used in this guide.
+Note that some of these acronyms might have alternate definitions.
+
+[width="100%",cols="27%,73%",options="header"]
+|===
+|*Acronym* |*Definition*
+|AAC |Altiplano Access Controller
+|ACCM |Access Cluster Campaign Manager
+|API |Application Programming Interface
+|AV |Altiplano Virtualizer
+|CPU |Central Processing Unit
+|IBN |Intent-Based Networking
+|LS |Lightspan
+|LT |Line Termination
+|NBI |Northbound Interface
+|OLT |Optical Line Termination
+|ONT |Optical Network Termination
+|OpenTSDB |It is a scalable time series database that simplifies the process of storing and analyzing large amount of data.
+|OSS |Operations Support System
+|UI |User Interface
+|URL |Uniform Resource Locator
+|WebUI |Web User Interface
+|===
+
+include::ROOT:go-back-component.adoc[Back]
