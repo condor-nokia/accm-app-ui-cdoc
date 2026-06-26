@@ -55,6 +55,15 @@ image::CAMPAIGNSSection_executing.png[align="center"]
 +
 image::CAMPAIGNSSection_confirmCancelAction.png[align="center"]
 
+[NOTE]
+====
+When the cancel action is executed, the campaign will remain in "Executing" status until Altiplano effectively aborts the activity in progress. This can take time, and while the process lasts, the message "The cancellation is being executed" is shown.
+
+image::CAMPAIGNSSection_canceling1.png[align="center"]
+
+image::CAMPAIGNSSection_canceling2.png[align="center"]
+====
+
 == Retry
 To retry a campaign using the {app-short-name} WebUI, you must execute the following steps:
 
