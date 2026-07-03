@@ -2,7 +2,6 @@ include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
 
 = What's new in Release {release-number}{prerelease-tag}
 
-* Fixes to bugs reported by Nokia: FNMS-368192, FNMS-379233, FNMS-380523, FNMS-381042.
-* The "cause" attribute of the campaigns is set with a message when the cancel action is executed, until Altiplano cancels the activity, in the campaign list and campaign detail.
+* Fixes to bugs reported by Nokia: FNMS-381072, FNMS-381899, FNMS-383401.
 
 include::ROOT:go-back-component.adoc[Back]
