@@ -21,6 +21,27 @@ Refer to xref:User_Guide:How_to_manage_ACCM_access.adoc[How to Manage {app-short
 To access Altiplano campaign associated to an {app-short-name} campaign using the WebUI,
 you must execute the following steps:
 
+. Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen.
++
+image::CAMPAIGNS_menu.png[align="center"]
+
+. All the campaigns will be listed:
++
+image::CAMPAIGNS_menuSection.png[align="center"]
+
+. Locate the desired campaign and click the deeplink button on the row:
++
+image::CAMPAIGNSSection_deeplink.png[align="center"]
+
+. Click the desired cluster in the popup to navigate to Altiplano's campaign:
++
+image::CAMPAIGNSSection_deeplink_popup_campaign.png[align="center"]
+
+. A new tab with the campaign on Altiplano's site must be shown:
++
+image::CAMPAIGNSSection_AltiplanoCampaignDetails.png[align="center"]
+
+
 
 == Access Altiplano Campaign from {app-short-name} campaign details
 To access Altiplano campaign associated to an {app-short-name} cluster using the WebUI,
