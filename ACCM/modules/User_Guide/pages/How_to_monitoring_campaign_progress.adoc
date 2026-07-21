@@ -35,7 +35,7 @@ image::CAMPAIGNSSection_detail.png[align="center"]
 
 . The general progress for the campaign is shown:
 +
-.General progress for an executing campaign
+.General progress for success campaign
 image::CAMPAIGNSSection_GeneralProgress.png[align="center"]
 
 . Locate the cluster to monitor, and click the Details button on the row.
@@ -44,15 +44,10 @@ image::CAMPAIGNSSection_detail.png[align="center"]
 
 . The general progress for the selected cluster is shown:
 +
-.Progress for an executing cluster
-image::CAMPAIGNSSection_clusterDetails.png[align="center"]
-+
 .Progress for a success cluster
 image::CAMPAIGNSSection_clusterDetails2.png[align="center"]
 
 . In case of error, the cause is shown at cluster level, and every step has its own cause:
-+
-image::CAMPAIGNSSection_ClusterDetailsErrors.png[align="center"]
 +
 image::CAMPAIGNSSection_ClusterDetailsErrors2.png[align="center"]
 

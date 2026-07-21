@@ -1,0 +1,60 @@
+include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
+
+= How to access Altiplano SW resources from {app-short-name}
+
+== Introduction
+
+This section provides the steps required to access direct hyperlinks pointing to the resources inside Altiplano from the
+CCM interface.
+
+This allows the operator to seamlessly shift context into the underlying management platform to
+troubleshoot localized issues.
+
+
+[NOTE]
+====
+Before accessing resources, you must be authenticated to the {app-short-name} as an altiplano user.
+Refer to xref:User_Guide:How_to_manage_ACCM_access.adoc[How to Manage {app-short-name} access] section for more details.
+====
+
+== Access Altiplano Campaign from {app-short-name} campaign list
+To access Altiplano campaign associated to an {app-short-name} campaign using the WebUI,
+you must execute the following steps:
+
+
+
+== Access Altiplano Campaign from {app-short-name} campaign details
+To create a campaign using the {app-short-name} WebUI, you must execute the following steps:
+
+== Access Altiplano device activity from {app-short-name} campaign cluster details
+
+. Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen.
++
+image::CAMPAIGNS_menu.png[align="center"]
+
+. All the campaigns will be listed:
++
+image::CAMPAIGNS_menuSection.png[align="center"]
+
+. Locate the campaign that contains the desired cluster, and click the Detail button on the row.
++
+image::CAMPAIGNSSection_detail.png[align="center"]
+
+. Locate the desired cluster and click the Detail button on the row.
++
+image::CAMPAIGNSSection_detail.png[align="center"]
+
+. Locate the desired element of the cluster and click the deeplink button on the row.
++
+image::CAMPAIGNSSection_deeplink.png[align="center"]
+
+. Locate the desired activity of cluster element and click it:
++
+image::CAMPAIGNSSection_deeplink_popup.png[align="center"]
+
+. A new tab with the element on Altiplano's site must be shown:
++
+image::CAMPAIGNSSection_AltiplanoDeviceDetails.png[align="center"]
+
+
+include::ROOT:go-back-component.adoc[Back]

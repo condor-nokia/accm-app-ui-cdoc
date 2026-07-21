@@ -2,6 +2,7 @@ include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
 
 = What's new in Release {release-number}{prerelease-tag}
 
-* Fixes to bugs reported by Nokia: FNMS-381072, FNMS-381899, FNMS-383401.
+* New feature that allows the operator to access direct hyperlinks pointing to the resources inside
+Altiplano from the ACCM interface.
 
 include::ROOT:go-back-component.adoc[Back]

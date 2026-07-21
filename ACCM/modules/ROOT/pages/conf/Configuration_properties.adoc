@@ -1,13 +1,13 @@
 
-:release-month: June
+:release-month: July
 :release-year: 2026
-:release-number: 26.6
+:release-number: 26.6.1
 :prerelease-tag:
 :altiplano-release-number: 26.6
 :screenshot-altiplano-release-number: 26.6
 :chart-version: XX.X
 :helm-chart-name: altiplano-cm
-:issue-number: 3
+:issue-number: 1
 :part-number: YYY-YYYYY-YYYY-YYYY
 :app-full-name: Access Cluster Campaign Manager
 :app-short-name: ACCM
