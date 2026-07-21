@@ -23,7 +23,38 @@ you must execute the following steps:
 
 
 == Access Altiplano Campaign from {app-short-name} campaign details
-To create a campaign using the {app-short-name} WebUI, you must execute the following steps:
+To access Altiplano campaign associated to an {app-short-name} cluster using the WebUI,
+you must execute the following steps:
+
+. Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen.
++
+image::CAMPAIGNS_menu.png[align="center"]
+
+. All the campaigns will be listed:
++
+image::CAMPAIGNS_menuSection.png[align="center"]
+
+. Locate the campaign that contains the desired cluster, and click the Detail button on the row.
++
+image::CAMPAIGNSSection_detail.png[align="center"]
+
+. All the clusters of the campaign will be listed:
++
+.Clusters
+image::CAMPAIGNSSection_GeneralProgress.png[align="center"]
+
+. Locate the desired cluster and click the deeplink button on the row.
++
+image::CAMPAIGNSSection_deeplink.png[align="center"]
+
+. Click the option in the popup to navigate to Altiplano:
++
+image::CAMPAIGNSSection_deeplink_popup_cluster.png[align="center"]
+
+. A new tab with the campaign on Altiplano's site must be shown:
++
+image::CAMPAIGNSSection_AltiplanoCampaignDetails.png[align="center"]
+
 
 == Access Altiplano device activity from {app-short-name} campaign cluster details
 
