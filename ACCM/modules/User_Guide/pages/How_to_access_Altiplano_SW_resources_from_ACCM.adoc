@@ -5,7 +5,7 @@ include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
 == Introduction
 
 This section provides the steps required to access direct hyperlinks pointing to the resources inside Altiplano from the
-CCM interface.
+{app-short-name} interface.
 
 This allows the operator to seamlessly shift context into the underlying management platform to
 troubleshoot localized issues.
