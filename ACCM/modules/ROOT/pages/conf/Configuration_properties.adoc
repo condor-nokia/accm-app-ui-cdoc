@@ -7,7 +7,7 @@
 :screenshot-altiplano-release-number: 26.6
 :chart-version: XX.X
 :helm-chart-name: altiplano-cm
-:issue-number: 1
+:issue-number: 2
 :part-number: YYY-YYYYY-YYYY-YYYY
 :app-full-name: Access Cluster Campaign Manager
 :app-short-name: ACCM
