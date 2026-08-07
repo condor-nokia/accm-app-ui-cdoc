@@ -64,6 +64,13 @@ image::CAMPAIGNSSection_canceling1.png[align="center"]
 image::CAMPAIGNSSection_canceling2.png[align="center"]
 ====
 
+[NOTE]
+====
+A campaign created in ACCM if it is cancelled by the user and if the same campaign is In-progress in Altiplano Software manager then:
+
+* If the operator wants to clean up fully the software campaign ,  delete action has to be performed for the campaign.
+====
+
 == Retry
 To retry a campaign using the {app-short-name} WebUI, you must execute the following steps:
 

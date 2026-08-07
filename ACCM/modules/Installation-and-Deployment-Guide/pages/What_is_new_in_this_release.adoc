@@ -2,7 +2,6 @@ include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
 
 = What's new in Release {release-number}{prerelease-tag}
 
-* The progress feature was complete adding the start and end dates to the operations in the
-campaings, cluster and activities. Also the number of rolledback elements are shown.
+* Clarification regarding the cancellation action and campaign status in Altiplano.
 
 include::ROOT:go-back-component.adoc[Back]
