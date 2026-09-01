@@ -31,8 +31,6 @@ The campaign status provides a high-level overview of the entire automated updat
 * *Rollback Error*: A failure occurred while trying to execute a software rollback on an element.
 * *Rolled back*: The rollback process has finished successfully, and the selected elements from one or more clusters have been reverted completely to their previous software version.
 
-image::CAMPAIGNSSection_campaignStates.png[align="center"]
-
 === Cluster States
 Their statuses are calculated dynamically based on non-excluded components.
 
@@ -44,8 +42,6 @@ Their statuses are calculated dynamically based on non-excluded components.
 * *Error*: The upgrade or a post-check verification failed for a specific device batch, halting the process for that entire cluster.
 * *Rollback Error*: A failure occurred while trying to execute a software rollback on an element.
 * *Rolled back*: The rollback process has finished successfully, and the selected elements have been reverted completely to their previous software version.
-
-image::CAMPAIGNSSection_clusterStates.png[align="center"]
 
 === Element States
 
@@ -60,8 +56,6 @@ States that an element can transit through during the lifecycle of a software up
 * *RollBacked*: The element has successfully reverted to its previous stable software package, and its post-checks have validated that it has safely returned to an operational state.
 * *RollBackError*: The system encountered an error while trying to execute a rollback on this element, leaving the element in an indeterminate state that requires manual operator intervention.
 * *Canceled*: The element's update sequence was explicitly aborted by an operator command while it was actively executing.
-
-image::CAMPAIGNSSection_elementStates.png[align="center"]
 
 === State-Based Actions Matrix
 

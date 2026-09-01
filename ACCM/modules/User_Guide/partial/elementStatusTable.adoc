@@ -1,0 +1,31 @@
+[cols="1,3", options="header"]
+|===
+|Status |Description
+
+|`NotScheduled`
+|The element belongs to a campaign that has been created but does not have execution or download dates defined, meaning it is awaiting further configuration or manual initiation.
+
+|`Scheduled`
+|The element is queued for an update. Both download and update dates have been successfully set in the future, and the element is waiting for the Scheduler to trigger execution.
+
+|`Executing`
+|The element is actively undergoing its assigned software management task, which includes either the software download phase, the upgrade process within Altiplano, or the post checks verifications done by ACCM.
+
+|`Success`
+|The element has successfully completed its update activity sequence, cleared all upgrade post-checks (such as reachability and configuration alignment), and is fully functional.
+
+|`Error`
+|An operation has failed on this specific element. This can occur due to a failed execution step in Altiplano or a failure during one of the mandatory post-check verifications (e.g., traffic ramp-up or reachability checks).
+
+|`ExecutingRollback`
+|The element is currently undergoing an operator-initiated rollback procedure to revert its software to the previous version, or running post checks verifications after a successful rollback of the element’s software.
+
+|`RollBacked`
+|The element has successfully reverted to its previous stable software package, and its post-checks have validated that it has safely returned to an operational state.
+
+|`RollBackError`
+|The system encountered an error while trying to execute a rollback on this element, leaving the element in an indeterminate state that requires manual operator intervention.
+
+|`Canceled`
+|The element’s update sequence was explicitly aborted by an operator command while it was actively executing.
+|===

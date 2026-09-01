@@ -1,0 +1,31 @@
+[cols="1,3", options="header"]
+|===
+|Status |Description
+
+|`Scheduled`
+|The campaign has been successfully defined and queued with specific future dates for software download and update execution.
+
+|`Not Scheduled`
+|The campaign has been saved into the system but does not have execution dates configured, requiring a manual trigger to start.
+
+|`Executing`
+|The campaign is actively running its orchestration workflows across the associated clusters.
+
+|`Success`
+|The software update has completed successfully across all elements in all targeted clusters.
+
+|`ExecutingRollback`
+|The system is actively reverting one or more elements back to their previous software versions.
+
+|`Canceled`
+|An executing campaign was manually stopped by an operator, halting further updates.
+
+|`Error`
+|The execution failed during deployment (e.g., due to an activity failing on Altiplano, or some post-check verification).
+
+|`RollbackError`
+|A failure occurred while trying to execute a software rollback on an element.
+
+|`Rolledback`
+|The rollback process has finished successfully, and the selected elements from one or more clusters have been reverted completely to their previous software version.
+|===

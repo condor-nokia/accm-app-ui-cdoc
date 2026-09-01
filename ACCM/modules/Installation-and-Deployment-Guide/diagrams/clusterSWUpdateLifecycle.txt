@@ -1,0 +1,85 @@
+@startuml
+title Cluster SW Upgrade Campaign Lifecycle
+
+start
+
+partition "Configuration Phase" {
+    :Create Software Matrix (Prerequisite);
+
+    :Create Campaign;
+
+    if (Scheduled enabled?) then (yes)
+      :Campaign Status = Scheduled;
+    else (no)
+      :Campaign Status = Not Scheduled;
+    endif
+}
+
+partition "Execution Phase" {
+  if (Execution Triggered?) then (Scheduled Date Reached)
+    :System Auto-Triggers Execution;
+  else (Operator Action)
+    :User Action: Click "Manual Start";
+  endif
+
+  :Campaign Status = Executing;
+  :System executes Download & SW Upgrade activities;
+
+  if (User triggers "Cancel" during execution?) then (yes)
+    :Campaign Status = Cancelled;
+  else (no)
+    :Monitor Campaign Progress;
+    :Campaign Reaches Final State;
+  endif
+}
+
+partition "Final States & Allowed User Actions" {
+  switch (Campaign Current Status?)
+
+  case ( SUCCESS )
+    switch (Operator Action?)
+    case ( Do Nothing )
+      :Leave Campaign As Is;
+      :Campaign Status = Success;
+    case ( Start Rollback )
+      :Execute Rollback on specific element;
+      :Campaign Status = Executing Rollback;
+    case ( Delete Campaign )
+      :Delete Campaign;
+      stop
+    endswitch
+
+  case ( \n ERROR / CANCELLED )
+    switch (Operator Action?)
+    case ( Do Nothing )
+      :Leave Campaign As Is;
+      :Campaign Status = Error / Cancelled;
+    case ( Retry )
+      :Retry failed/cancelled activities;
+      :Campaign Status = Executing;
+    case ( Start Rollback )
+      :Execute Rollback on specific element;
+      :Campaign Status = Executing Rollback;
+    case ( Delete Campaign )
+      :Delete Campaign;
+      stop
+    endswitch
+
+  case ( ROLLBACK ERROR / ROLLEDBACK )
+    switch (Operator Action?)
+    case ( Do Nothing )
+      :Leave Campaign As Is;
+      :Campaign Status = Rollback Error / Rolledback;
+    case ( Retry Rollback )
+      :Retry failed rollback execution;
+      :Campaign Status = Executing Rollback;
+    case ( Delete Campaign )
+      :Delete Campaign;
+      stop
+    endswitch
+
+  endswitch
+}
+
+stop
+@enduml

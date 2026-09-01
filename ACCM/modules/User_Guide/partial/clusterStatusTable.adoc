@@ -1,0 +1,28 @@
+[cols="1,3", options="header"]
+|===
+|Status |Description
+
+|`Scheduled / Not Scheduled`
+|Inherited from the initial campaign state before orchestration begins.
+
+|`Executing`
+|The cluster is actively walking through its designated sequence of upgrade activities and automated post-check verifications.
+
+|`Success`
+|All eligible network elements within the cluster layer have been upgraded and verified successfully.
+
+|`ExecutingRollback`
+|One or more elements within the cluster are currently undergoing a software rollback.
+
+|`Canceled`
+|The cluster orchestration was halted midway due to a campaign cancellation.
+
+|`Error`
+|The upgrade or a post-check verification failed for a specific device batch, halting the process for that entire cluster.
+
+|`RollbackError`
+|A failure occurred while trying to execute a software rollback on an element.
+
+|`Rolledback`
+|The rollback process has finished successfully, and the selected elements have been reverted completely to their previous software version.
+|===

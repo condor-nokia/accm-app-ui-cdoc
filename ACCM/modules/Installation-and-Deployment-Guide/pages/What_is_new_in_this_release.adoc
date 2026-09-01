@@ -2,6 +2,10 @@ include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
 
 = What's new in Release {release-number}{prerelease-tag}
 
-* Clarification regarding the cancellation action and campaign status in Altiplano.
+* Lifecycle Flowchart: Added a new diagram to the overview page.
+* Input Descriptions: Added full details for software matrices and campaigns.
+* Logged-in User Note: Removed from all pages.
+* Statuses Overview: Removed the standalone section and embedded status explanations directly into relevant sections.
+* Campaign Actions: Clarified status requirements and action availability for each campaign action description.
 
 include::ROOT:go-back-component.adoc[Back]

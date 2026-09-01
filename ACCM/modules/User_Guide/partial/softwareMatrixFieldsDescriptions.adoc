@@ -1,0 +1,47 @@
+- *Type:* It is the type of the software matrix. Allowed values are:
+** *Devices Only:* To perform software operations on the device.
+** *Devices and ONTs:* To perform software operations on the device and all its associated ONTs.
+** *ONTs Only:* To perform software operations only on the ONTs.
+- *Device Configuration*: At least one device configuration must be added to define the software version and packages to be used by device types.
+You can add entries for the target solution types in any one of the following ways:
++
+[cols="1,2", options="header"]
+|===
+| Target Solution Type | Steps
+
+| *Device*
+a|
+1. Click the *Add an entry* icon.
+2. Select a device type from the *Device Type* list.
+3. Configure the device type parameters.
+* For a Lightspan device type, select the *Device Version*, and *Target Software* which is a software image file archive present in the Altiplano Access Controller WebDAV File Server.
+* For other device types, select the *Device Version* and *Target Software* which is a valid URL or software image file archive present in the Access Controller WebDAV File Server.
+4. Click *Add device*.
+
+| *Device and all its ONTs*
+a|
+1. Click the Add an entry icon.
+2. Select a device type from the *Device Type* list.
+3. Select a device version from the *Device Version* list.
+4. Enter the *Device Software* which is a valid URL or software image file archive present in the Access Controller WebDAV File Server. The Access Controller does not validate the URL format. Make sure you validate the URL.
+* For Lightspan Copper devices, the URL format is supported, but only in the software descriptor mode. The overall software descriptor mode is not supported. See _Lightspan Copper OAM manual - Software Management_ for more information on the download modes.
+* For Lightspan Fiber devices, the *Target Software* must be accessible from the WebDAV File Server. The option to use a URL is not supported.
+5. Configure ONT releases (optional, enabling the *ONU software upgrade supported* toggle):
+* In the case of a Nokia ONT, select the Nokia ONT release from the *ONT Release* list.
+* In the case of a vendor-specific ONT, select the vendor-specific ONT release from the *ONT Vendor Specific Release 1* and *ONT Vendor Specific Release 2* lists. Currently, vendor-specific ONT support is available only for eONUs.
+6. Click the Add icon to add the target ONT software entries.
+7. In the *ONT Software Mapping* section, configure the order of mapping:
+* For the ONT device type, select the *Target Release* which is the ONT Release available in the Access Controller WebDAV file server.
+* For vendor-specific ONTs, select *Target Vendor Specific Release 1* or *Target Vendor Specific Release 2*. Currently, vendor-specific ONT support is available only for eONUs.
+* Add the EONU selection criteria.
+8. Click *Save configuration*.
+
+| *ONTs Only*
+a|
+1. Click the Add an entry icon.
+2. Select *Target Release* and *Vendor Specific Release 1* and/or *Vendor Specific Release 2*.
+3. Click the Add icon to configure the order of ONT software mapping. Configure the target ONT software release, vendor-specific target software release 1 and 2 and the EONU selection criteria.
+4. Click *Save configuration*.
++
+NOTE: You can't add multiple ONTs for a target solution.
+|===

@@ -6,12 +6,6 @@ include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
 
 This section provides the steps required to manage the campaigns in the {app-short-name}.
 
-[NOTE]
-====
-Before managing campaigns, you must be authenticated to the {app-short-name} as an altiplano user.
-Refer to xref:User_Guide:How_to_manage_ACCM_access.adoc[How to Manage {app-short-name} access] section for more details.
-====
-
 == Create Campaign
 To create a campaign using the {app-short-name} WebUI, you must execute the following steps:
 
@@ -33,13 +27,28 @@ image::CAMPAIGNSSection_createCAMPAIGNS.png[align="left"]
 
 . Enter all required values:
 +
-- *Name:* It is the campaign name.
+- *Name:* It is the campaign name. Must be unique.
+- *Schedule:* (optional, enabling the *Schedule* toggle)
+** *Download Date:* Specific date and time for the software download to the devices. Must be in the future and before Update Date.
+** *Update Date:* Specific date and time for the start of the campaign's execution. Must be in the future and after Download Date.
 - *Software matrix:* It is the name of the software matrix to use. At least one matrix must exist and must be created previously on the "SOFTWARE MATRIX" section.
-- *Clusters*: At least one cluster must be selected from the suggested clusters
+- *Clusters*: At least one cluster must be selected from the suggested clusters. +
+For each cluster you can select the target devices: +
+* *All devices:* All cluster's devices
+* *Exclude*: List of specific element names to exclude from the update within this cluster.
+* *Included*: List of specific element names to include on the update within this cluster.
+
 . Click the *SAVE* button.
 
-
 == Edit Campaign
+
+Editing is restricted once the campaign transitions to `Executing` or any terminal state to ensure orchestration consistency.
+
+[NOTE]
+====
+Campaign details can only be edited when the campaign is in `Scheduled` or `Not Scheduled` state.
+====
+
 To edit a campaign using the {app-short-name} WebUI, you must execute the following steps:
 
 . Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen.
@@ -61,11 +70,26 @@ image::CAMPAIGNSSection_updateCAMPAIGN.png[align="left"]
 . The values that can be updated are:
 +
 - *Software matrix:* It is the name of the software matrix to use. At least one matrix must exist and must be created previously on the "SOFTWARE MATRIX" section.
-- *Schedule:* (Optional) It allows to add download and update dates so the campaign can run automatically when the dates arrive.
-- *Clusters*: At least one cluster must be selected from the suggested clusters.
+- *Schedule:* (optional, enabling the *Schedule* toggle)
+** *Download Date:* Specific date and time for the software download to the devices. Must be in the future and before Update Date.
+** *Update Date:* Specific date and time for the start of the campaign's execution. Must be in the future and after Download Date.
+- *Software matrix:* It is the name of the software matrix to use. At least one matrix must exist and must be created previously on the "SOFTWARE MATRIX" section.
+- *Clusters*: At least one cluster must be selected from the suggested clusters. +
+For each cluster you can select the target devices: +
+* *All devices:* All cluster's devices
+* *Exclude*: List of specific element names to exclude from the update within this cluster.
+* *Included*: List of specific element names to include on the update within this cluster.
 . Click the *SAVE* button.
 
 == Delete Campaign
+
+Deleting a campaign completely removes it from the local database, scheduler, and corresponding Altiplano modules. Deletion is strictly blocked if the campaign is actively running.
+
+[NOTE]
+====
+**Allowed Delete States:** `Scheduled`, `NotScheduled`, `Success`, `Canceled`, `Error`.
+====
+
 To delete a campaign using the {app-short-name} WebUI, you must execute the following steps:
 
 . Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen.
