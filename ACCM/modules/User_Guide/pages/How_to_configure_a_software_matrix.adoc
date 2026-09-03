@@ -7,6 +7,14 @@ include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
 This section provides the steps required to manage the software matrices in the {app-short-name}.
 
 == Create Software Matrix
+
+=== Prerequisites
+* To be able to perform HTTPS-based software download through WebDAV file server, configure the respective WebDAV certificates, see https://documentation.nokia.com/aces/htdocs/3JL-08002-BNAA-PCZZA/R2661_ACUG/UG/26.6/UG/sw-mgmt/ManagingTargetSolutions.html#main@IDG:Installation-and-Deployment-Guide:certs/ConfiguringCertificatesinWebDAVFileServer.adoc[Configuring certificates in WebDAV file server for device software download through HTTPS port] in the Installation and Deployment Guide for Nokia Altiplano Access Controller and FWA Controller.
+
+* If you are performing ONT upgrade, you must determine the release version of the ONT that you are planning to upgrade.
+For ONTs, the Software Management application supports ONT release software instead of the file name of the ONT Software. The advantage is that there is no requirement to select different software files for each ONT hardware type. The Software Management application determines the proper software file by examining the actual ONT’s hardware type at the time of upgrade.
+=== Steps
+
 To create a software matrix using the {app-short-name} WebUI, you must execute the following steps:
 
 . Click the "SOFTWARE MATRIX" option on the menu bar displayed on top of the screen.

@@ -7,6 +7,11 @@ include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
 This section provides the steps required to manage the campaigns in the {app-short-name}.
 
 == Create Campaign
+
+=== Prerequisites
+* Ensure that the software matrix to be used for this software campaign is configured. See xref:How_to_configure_a_software_matrix.adoc[Creating a software matrix] for more information.
+
+=== Steps
 To create a campaign using the {app-short-name} WebUI, you must execute the following steps:
 
 . Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen.

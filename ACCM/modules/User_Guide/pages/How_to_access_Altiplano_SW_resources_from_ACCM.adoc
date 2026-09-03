@@ -10,6 +10,8 @@ This section provides the steps required to access direct hyperlinks pointing to
 This allows the operator to seamlessly shift context into the underlying management platform to
 troubleshoot localized issues.
 
+NOTE: Changes to software campaigns, activities should not be directly done on the Altiplano Software Campaign Manager as this will not be reflected in ACCM and cause inconsistencies. Hence, it is necessary to ensure that Altiplano software campaign manager pages accessed through deep links or otherwise are used only for viewing and not for any changes to software campaigns. *Any changes to Software campaigns, activities should only be done through ACCM*
+
 == Access Altiplano Campaign from {app-short-name} campaign details
 To access Altiplano campaign associated to an {app-short-name} cluster using the WebUI,
 you must execute the following steps:
