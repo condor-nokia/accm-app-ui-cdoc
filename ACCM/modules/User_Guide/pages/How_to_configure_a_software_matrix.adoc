@@ -36,7 +36,7 @@ image::SOFTWAREMATRIXSection_createSOFTWAREMATRIX.png[align="left"]
 . Enter all required values:
 +
 - *Name:* It is the software matrix name.
-include::../partial/softwareMatrixFieldsDescriptions.adoc[]
+include::partial$softwareMatrixFieldsDescriptions.adoc[]
 
 . Click the *SAVE* button.
 
@@ -62,7 +62,7 @@ image::SOFTWAREMATRIXSection_updateSOFTWAREMATRIX.png[align="left"]
 
 . The values that can be updated are:
 +
-include::../partial/softwareMatrixFieldsDescriptions.adoc[]
+include::partial$softwareMatrixFieldsDescriptions.adoc[]
 . Click the *SAVE* button.
 
 
