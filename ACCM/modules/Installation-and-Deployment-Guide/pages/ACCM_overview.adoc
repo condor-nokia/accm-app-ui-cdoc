@@ -40,6 +40,6 @@ The following table describes the main features provided by {app-full-name}.
 == Workflow using {app-short-name} campaigns
 The {app-full-name} helps you to accomplish the workflows with respect to the software upgrades across multiple device clusters. You can use the following high-level steps to perform a software upgrade using the {app-short-name}:
 
-image::../images/clusterSWUpdateLifecycle.png[]
+image::clusterSWUpdateLifecycle.png[align="center"]
 
 include::ROOT:go-back-component.adoc[Back]

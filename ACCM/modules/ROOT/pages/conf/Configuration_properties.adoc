@@ -14,7 +14,7 @@
 :main-base-app: Altiplano
 :ip-host-example: 100.121.38.81
 :accm-web-context: campaign-manager-webapp
-:accm-api-context: campaign-manager-api
+:accm-api-context: campaign-manager-api/v1
 :altiplano-host: ALTIPLANO_SERVER
 
 //Installation and Deployment:
