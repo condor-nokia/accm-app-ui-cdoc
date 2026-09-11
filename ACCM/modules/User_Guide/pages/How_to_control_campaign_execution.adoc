@@ -138,9 +138,9 @@ image::CAMPAIGNSSection_detail.png[align="center"]
 +
 image::CAMPAIGNSSection_clusterElements.png[align="center"]
 
-. Locate the element to rollback and click the rollback button. Please note that the Rollback option is only available for Success or Rollback Error elements:
+. Locate the element to rollback and click the rollback button:
 +
-image::CAMPAIGNSSection_detail.png[align="center"]
+image::CAMPAIGNSSection_rollback.png[align="center"]
 
 . Confirm the action:
 +
