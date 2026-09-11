@@ -32,7 +32,9 @@ image::CAMPAIGNSSection_createCAMPAIGNS.png[align="left"]
 
 . Enter all required values:
 +
-- *Name:* It is the campaign name. Must be unique and have a maximum of 18 characters.
+- *Name:* It is the campaign name. Must be unique.
+[IMPORTANT]
+The combination of the campaign name and cluster name cannot exceed 18 characters.
 - *Schedule:* (optional, enabling the *Schedule* toggle)
 ** *Download Date:* Specific date and time for the software download to the devices. Must be in the future and before Update Date.
 ** *Update Date:* Specific date and time for the start of the campaign's execution. Must be in the future and after Download Date.
