@@ -7,5 +7,6 @@ include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
 * Logged-in User Note: Removed from all pages.
 * Statuses Overview: Removed the standalone section and embedded status explanations directly into relevant sections.
 * Campaign Actions: Clarified status requirements and action availability for each campaign action description.
+* Screenshots for campaign list are updated.
 
 include::ROOT:go-back-component.adoc[Back]
