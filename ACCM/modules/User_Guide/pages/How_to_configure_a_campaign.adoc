@@ -38,12 +38,16 @@ The combination of the campaign name and cluster name cannot exceed 18 character
 - *Schedule:* (optional, enabling the *Schedule* toggle)
 ** *Download Date:* Specific date and time for the software download to the devices. Must be in the future and before Update Date.
 ** *Update Date:* Specific date and time for the start of the campaign's execution. Must be in the future and after Download Date.
+[IMPORTANT]
+Download and update dates must either both be provided or both be omitted
 - *Software matrix:* It is the name of the software matrix to use. At least one matrix must exist and must be created previously on the "SOFTWARE MATRIX" section.
 - *Clusters*: At least one cluster must be selected from the suggested clusters. +
 For each cluster you can select the target devices: +
 * *All devices:* All cluster's devices
 * *Exclude*: List of specific element names to exclude from the update within this cluster.
 * *Included*: List of specific element names to include on the update within this cluster.
+[NOTE]
+Inclusion and exclusion lists are mutually exclusive and cannot be configured together for the same cluster.
 
 . Click the *SAVE* button.
 

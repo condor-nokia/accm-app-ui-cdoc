@@ -46,7 +46,7 @@ image::CAMPAIGNSSection_deeplink_popup_cluster.png[align="center"]
 image::CAMPAIGNSSection_AltiplanoCampaignDetails.png[align="center"]
 
 
-== Access Altiplano device activity from {app-short-name} campaign cluster details
+== Access Altiplano element activity from {app-short-name} campaign cluster details
 
 . Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen.
 +

@@ -40,6 +40,63 @@ image::CAMPAIGNSSection_clusterDetails2.png[align="center"]
 +
 image::CAMPAIGNSSection_clusterDetailsError2New.png[align="center"]
 
+[NOTE]
+====
+While Download and Upgrade progress are always visible in the Progress view, Rollback progress is shown dynamically only when a rollback operation is underway.
+
+image::CAMPAIGNSSection_clusterDetails3.png[align="center"]
+====
+
+== Monitor element's operations
+
+To monitor the operations of an element using the {app-short-name} WebUI, you must execute the following steps:
+
+. Click the "CAMPAIGNS" option on the menu bar displayed on top of the screen.
++
+image::CAMPAIGNS_menu.png[align="center"]
+
+. All the campaigns will be listed:
++
+image::CAMPAIGNS_menuSection.png[align="center"]
+
+. Locate the campaign to monitor, and click the Detail button on the row.
++
+image::CAMPAIGNSSection_detail.png[align="center"]
+
+. The general progress for the campaign is shown:
++
+.General progress for success campaign
+image::CAMPAIGNSSection_GeneralProgress.png[align="center"]
+
+. Locate the cluster to monitor, and click the Details button on the row.
++
+image::CAMPAIGNSSection_detail.png[align="center"]
+
+. The general progress for the selected cluster is shown:
++
+.Progress for a success cluster
+image::CAMPAIGNSSection_clusterDetails2.png[align="center"]
+
+. Locate the element to monitor, and click the Detail button on the row.
++
+image::CAMPAIGNSSection_detail.png[align="center"]
+
+. The timeline of the operations for the element are shown.
++
+image::CAMPAIGNSSection_clusterDetailsElementOperations.png[align="center"]
++
+If an operation lacks start and end dates while the campaign is in a final state, it indicates that the operation was not executed on that element.
++
+image::CAMPAIGNSSection_clusterDetailsElementOperationsError.png[align="center"]
+
++
+[NOTE]
+====
+Rollback operation is displayed dynamically only when a rollback is executed on an element.
+
+image::CAMPAIGNSSection_clusterDetailsElementOperationsRollback.png[align="center"]
+====
+
 == Status
 
 * NotScheduled
