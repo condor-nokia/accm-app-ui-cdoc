@@ -19,7 +19,7 @@ To use the {app-short-name} through the WebUI you must:
 . Access the {app-short-name} WebUI using the following URL: +
 link:https://{altiplano-host}/{accm-web-context}[https://{altiplano-host}/{accm-web-context},window=_blank]
 +
-For example:: https://{ip-host-example}/{accm-web-context}/
+For example:: \https://{ip-host-example}/{accm-web-context}
 
 . Log in to {app-short-name} using a specific username and password.
 +

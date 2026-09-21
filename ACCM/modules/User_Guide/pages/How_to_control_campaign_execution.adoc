@@ -105,11 +105,16 @@ image::CAMPAIGNSSection_confirmRetryAction.png[align="center"]
 
 == Rollback
 
-Reverts a specific element back to its prior stable version. If a device is selected under a "Device and all its ONTs" matrix, all subtended ONTs are rolled back automatically.
+Reverts a specific element back to its prior stable version. If a device is selected under a campaign with "Device and all its ONTs" matrix type, all subtended ONTs are rolled back automatically.
 
 [NOTE]
 ====
-**Allowed Rollback States:** Campaign (`Success`, `Error`, `Canceled`, `ExecutingRollback`) AND Element (`Success`).
+**Allowed Rollback States:** Campaign (`Success`, `Error`, `Canceled`, `ExecutingRollback`, `ExecutingRollback`, `RollbackError`, `Rolledback`) AND Element (`Success`, `RollbackError`).
+====
+
+[IMPORTANT]
+====
+Rollback action can fail if the combination of device and campaign name exceed 18 characters.
 ====
 
 To rollback an element (device or ONT) using the {app-short-name} WebUI, you must execute the following steps:
