@@ -1,10 +1,10 @@
 
-:release-month: July
+:release-month: October
 :release-year: 2026
-:release-number: 26.6.2
+:release-number: 26.12.1
 :prerelease-tag:
-:altiplano-release-number: 26.6
-:screenshot-altiplano-release-number: 26.6
+:altiplano-release-number: 26.12
+:screenshot-altiplano-release-number: 26.12
 :chart-version: XX.X
 :helm-chart-name: altiplano-cm
 :issue-number: 1
