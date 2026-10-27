@@ -7,7 +7,7 @@ include::ROOT:conf/Configuration_properties.adoc[leveloffset=0]
 This section provides the steps required to manage the software matrices in the {app-short-name}.
 
 == Create Software Matrix
-Use this procedure to create a target solution.
+Use this procedure to create a software matrix.
 
 === Terminology used in this section
 * *Device Type*: Device types available on the network.
